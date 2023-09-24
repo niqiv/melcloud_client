@@ -45,7 +45,7 @@ class MELCloudClient:
             data = r.json()
             for building in data:
                 for device in building.get('Structure').get('Devices'):
-                    devices.append(MELCloudDevice(device))
+                    devices.append(MELCloudDevice(device, debug=self.debug))
 
         return devices
 

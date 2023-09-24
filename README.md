@@ -26,24 +26,27 @@ Import client and initialize it by logging in
     client = MELCloudClient(email='example@example.com', password='<password>')
 ```
 
+When initializing the client, user can define to enable debugging, which prints out more information about the client and devices by adding debug flag
+`MELCloudClient(debug=True')`.
+
 Show all devices in MELCloud
 
 ```python
-    devices = client.get_devices()
-    for i in devices:
-        print(i)
-        energy_consumed = i.get_energy_consumed()
-        print(energy_consumed)
+devices = client.get_devices()
+for i in devices:
+    print(i)
+    energy_consumed = i.get_energy_consumed()
+    print(energy_consumed)
 ```
 
 Get history report for time period fron yesterday to today
 
 ```python
-    from datetime import datetime, timedelta
-    report = client.get_history_report(
-        devices[0],
-        datetime.utcnow() - timedelta(days=1),
-        datetime.utcnow())
+from datetime import datetime, timedelta
+report = client.get_history_report(
+    devices[0],
+    datetime.utcnow() - timedelta(days=1),
+    datetime.utcnow())
 ```
 
 # Types
