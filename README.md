@@ -1,5 +1,23 @@
 # Mitsubishi MELCloud Client
 
+# Installation
+
+Client can be installed via `pip` directly from GitHub using command
+
+```
+pip install git+https://github.com/niqiv/melcloud_client.git
+```
+
+or locally for development after pulling directory, using commands
+
+```
+git clone https://github.com/niqiv/melcloud_client.git
+cd melcloud_client
+pip install -e .
+```
+
+# Usage
+
 Import client and initialize it by logging in
 
 ```python
