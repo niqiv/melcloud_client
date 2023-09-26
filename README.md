@@ -21,9 +21,9 @@ pip install -e .
 Import client and initialize it by logging in
 
 ```python
-    from melcloud_client import MELCloudClient
+from melcloud_client import MELCloudClient
 
-    client = MELCloudClient(email='example@example.com', password='<password>')
+client = MELCloudClient(email='example@example.com', password='<password>')
 ```
 
 When initializing the client, user can define to enable debugging, which prints out more information about the client and devices by adding debug flag
